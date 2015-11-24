@@ -1,0 +1,19 @@
+{
+  "name": "hapifw",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "async": "^1.5.0",
+    "bluebird": "^3.0.5",
+    "glue": "^2.4.0",
+    "handlebars": "^4.0.5",
+    "hapi": "^11.1.2",
+    "vision": "^4.0.1"
+  }
+}
