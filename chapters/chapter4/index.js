@@ -1,22 +1,15 @@
-var Hapi, server;
+var Glue, manifest, options;
 
-Hapi = require("hapi");
+Glue = require('glue');
 
-server = new Hapi.Server();
+manifest = require('./config/manifest.json');
 
-server.connection({
-  host: "localhost",
-  port: 3000
-});
+options = {
+  relativeTo: __dirname + '/modules'
+};
 
-server.route({
-  method: "GET",
-  path: "/",
-  handler: function(request, reply) {
-    return reply("<h1>Hello Hapi!</h1>");
-  }
-});
-
-server.start(function(err) {
-  return console.log("Hapi @ " + server.info.uri);
+Glue.compose(manifest, options, function(err, server) {
+  return server.start(function(err) {
+    return console.log("Server running at: " + server.info.uri);
+  });
 });

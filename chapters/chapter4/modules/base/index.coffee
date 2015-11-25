@@ -12,16 +12,16 @@ exports.register = (server, options, next) ->
 		method: 'GET'
 		handler: require('./home')
 	)
-	
-    server.route(
-        method: 'GET'
-        path: '/public/{path*}'
-        handler:
-            directory:
-                path: "./public"
-                index: false
-                listing: true
-    )
+
+	server.route(
+		method: 'GET'
+		path: '/public/{path*}'
+		handler:
+			directory:
+				path: './public'
+				index: false
+				listing: true
+	)
 
 	next()
 

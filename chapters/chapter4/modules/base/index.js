@@ -14,9 +14,15 @@ exports.register = function(server, options, next) {
     handler: require('./home')
   });
   server.route({
-    path: '/about',
     method: 'GET',
-    handler: require('./about')
+    path: '/public/{path*}',
+    handler: {
+      directory: {
+        path: './public',
+        index: false,
+        listing: true
+      }
+    }
   });
   return next();
 };
