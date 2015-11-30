@@ -10,9 +10,11 @@
         "labels": ["ui"]
     }],
     "plugins": {
-        "inert"            : null,
-        "vision"           : null,
-        "./auth"           : null,
-        "./base"           : null
+        "inert"   : null,
+        "vision"  : null,
+        "blipp"   : null,
+        "tv"      : null,
+        "lout"    : null,
+        "./base"  : null
     }
 }

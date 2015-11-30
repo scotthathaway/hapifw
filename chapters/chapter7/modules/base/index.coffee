@@ -10,19 +10,6 @@ exports.register = (server, options, next) ->
 	server.route(
 		path: '/'
 		method: 'GET'
-		config: {
-			auth: 'standard'
-			handler: (request, reply) ->
-				if request.auth.isAuthenticated
-					reply.redirect('/home')
-				else
-					reply.redirect('/login')
-		}
-	)
-
-	server.route(
-		path: '/home'
-		method: 'GET'
 		handler: require('./home')
 	)
 

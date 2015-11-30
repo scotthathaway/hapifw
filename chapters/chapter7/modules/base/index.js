@@ -11,20 +11,6 @@ exports.register = function(server, options, next) {
   server.route({
     path: '/',
     method: 'GET',
-    config: {
-      auth: 'standard',
-      handler: function(request, reply) {
-        if (request.auth.isAuthenticated) {
-          return reply.redirect('/home');
-        } else {
-          return reply.redirect('/login');
-        }
-      }
-    }
-  });
-  server.route({
-    path: '/home',
-    method: 'GET',
     handler: require('./home')
   });
   server.route({
