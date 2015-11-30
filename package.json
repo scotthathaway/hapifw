@@ -9,6 +9,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "alasql": "^0.2.1",
     "async": "^1.5.0",
     "bcrypt": "^0.8.5",
     "bell": "^6.0.0",
